@@ -24,5 +24,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', TemplateView.as_view(template_name='index.html'), name="index"),
+    url(r'^test', TemplateView.as_view(template_name='base.html'), name="base"),
     url(r'^oduck/', include('oduck.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

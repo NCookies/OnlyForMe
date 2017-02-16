@@ -124,8 +124,10 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+  background: url(/static/img/intro-bg.jpg) no-repeat bottom center scroll;
   background-color: black;
+  -webkit-filter: grayscale(50%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(50%);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
