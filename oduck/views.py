@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 
-def chatting(request):
-    return render(request, 'oduck/basee.html', {})
+def crawl_image(request):
+    return render(request, 'oduck/crawl_image.html', {})

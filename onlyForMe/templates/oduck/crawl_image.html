@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+{% block head %}
+
+<link rel="stylesheet" href="{% static '/css/normalize.css' %}">
+
+<link rel="stylesheet" href="{% static '/css/main.css' %}">
+
+<link rel="stylesheet" href="{% static '/css/crawl_image.css' %}"
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="container">
+    <div class="img">
+        <a target="_blank" href="fjords.jpg">
+            <img src="http://vignette3.wikia.nocookie.net/konosuba/images/4/4f/LN_Megumin.png/revision/latest?cb=20160331040602" alt="Fjords" width="300" height="200">
+        </a>
+
+        <div class="desc">Add a description of the image here</div>
+    </div>
+
+    <div class="img">
+        <a target="_blank" href="forest.jpg">
+            <img src="https://images8.alphacoders.com/681/681953.png" alt="Forest" width="300" height="200">
+        </a>
+
+        <div class="desc">Add a description of the image here</div>
+    </div>
+
+    <div class="img">
+        <a target="_blank" href="lights.jpg">
+          <img src="https://megumin.love/images/bg.jpg" alt="Northern Lights" width="300" height="200">
+        </a>
+
+        <div class="desc">Add a description of the image here</div>
+    </div>
+
+    <div class="img">
+        <a target="_blank" href="mountains.jpg">
+            <img src="https://megumin.love/images/bg.jpg" alt="Mountains" width="300" height="200">
+        </a>
+
+        <div class="desc">Add a description of the image here</div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
+{% block load_script %}
+
+<script src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
+
+<script src="{% static 'js/vendor/jquery-1.12.0.min.js' %}"></script>
+
+{% endblock %}
