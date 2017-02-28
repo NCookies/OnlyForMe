@@ -25,5 +25,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', TemplateView.as_view(template_name='index.html'), name="index"),
     url(r'^oduck/', include('oduck.urls')),
-    url(r'^project', TemplateView.as_view(template_name='portfolio/base.html'), name="index"),
+    url(r'^project/', TemplateView.as_view(template_name='portfolio/base.html'), name="index"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -4,18 +4,38 @@
 
 {% block head %}
 
-<link rel="stylesheet" href="{% static '/css/normalize.css' %}">
-
-<link rel="stylesheet" href="{% static '/css/main.css' %}">
-
-<link rel="stylesheet" href="{% static '/css/crawl_image.css' %}"
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'css/custom.css' %}">
+<link rel="stylesheet" href="{% static 'css/crawl_image.css' %}">
 
 {% endblock %}
 
 
 {% block content %}
 
+<!-- Content -->
 <div class="container">
+    <!-- Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <form class="page-header" action="/oduck/crawl_image/search/" method="post">
+
+                {% csrf_token %}
+
+                <div id="custom-search-input">
+                    <div class="input-group col-md-12">
+                        <input type="text" class="form-control input-lg" name="keyword" placeholder="Search...">
+                        <span class="input-group-btn">
+                            <button id="search_image" class="btn btn-info btn-lg" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <div class="img">
         <a target="_blank" href="fjords.jpg">
             <img src="http://vignette3.wikia.nocookie.net/konosuba/images/4/4f/LN_Megumin.png/revision/latest?cb=20160331040602" alt="Fjords" width="300" height="200">
@@ -49,14 +69,15 @@
     </div>
 </div>
 
-
 {% endblock %}
 
 
 {% block load_script %}
 
-<script src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
 
-<script src="{% static 'js/vendor/jquery-1.12.0.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/vendor/jquery-1.12.0.min.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'js/crawl_image.js' %}"></script>
 
 {% endblock %}
