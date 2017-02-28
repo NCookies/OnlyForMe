@@ -13,61 +13,35 @@
 
 {% block content %}
 
-<!-- Content -->
-<div class="container">
-    <!-- Heading -->
-    <div class="row">
-        <div class="col-lg-12">
-            <form class="page-header" action="/oduck/crawl_image/search/" method="post">
-
-                {% csrf_token %}
-
-                <div id="custom-search-input">
-                    <div class="input-group col-md-12">
-                        <input type="text" class="form-control input-lg" name="keyword" placeholder="Search...">
-                        <span class="input-group-btn">
-                            <button id="search_image" class="btn btn-info btn-lg" type="submit">
-                                <i class="glyphicon glyphicon-search"></i>
-                            </button>
-                        </span>
+<header class="search_head">
+    <div class="container">
+        <!-- Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <form class="page-header" action="/oduck/crawl_image/search/" method="post">
+                    {% csrf_token %}
+                    <div id="custom-search-input">
+                        <div class="input-group col-md-12">
+                            <input type="text" class="form-control input-lg" name="keyword" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button id="search_image" class="btn btn-info btn-lg" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </span>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
+
     </div>
+</header>
+<!-- Content -->
 
-    <div class="img">
-        <a target="_blank" href="fjords.jpg">
-            <img src="http://vignette3.wikia.nocookie.net/konosuba/images/4/4f/LN_Megumin.png/revision/latest?cb=20160331040602" alt="Fjords" width="300" height="200">
-        </a>
+<section class="container gallery">
 
-        <div class="desc">Add a description of the image here</div>
-    </div>
-
-    <div class="img">
-        <a target="_blank" href="forest.jpg">
-            <img src="https://images8.alphacoders.com/681/681953.png" alt="Forest" width="300" height="200">
-        </a>
-
-        <div class="desc">Add a description of the image here</div>
-    </div>
-
-    <div class="img">
-        <a target="_blank" href="lights.jpg">
-          <img src="https://megumin.love/images/bg.jpg" alt="Northern Lights" width="300" height="200">
-        </a>
-
-        <div class="desc">Add a description of the image here</div>
-    </div>
-
-    <div class="img">
-        <a target="_blank" href="mountains.jpg">
-            <img src="https://megumin.love/images/bg.jpg" alt="Mountains" width="300" height="200">
-        </a>
-
-        <div class="desc">Add a description of the image here</div>
-    </div>
-</div>
+</section>
+<!-- 검색을 하면 이미지가 추가됨 -->
 
 {% endblock %}
 

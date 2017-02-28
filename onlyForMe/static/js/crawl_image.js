@@ -7,6 +7,12 @@ $(document).ready(function(){
             success: function(data){
                 console.log('data : ', data)
                 if( data.success == 'true'){
+                    $.each(data.urls, function( index, value ) {
+                        console.log( index + ": " + value );
+                        $('.gallery')
+                        .append('<div class="img"><a target="_blank" href="fjords.jpg"><img src=' +
+                          value + ' alt="Fjords" width="300" height="200"></a></div>')
+                    });
                     // if( $('#login_error').length )
                     //         $('#login_error').remove();
                     // $('#popupLogin').popup("open");
